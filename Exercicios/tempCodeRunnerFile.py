@@ -1,0 +1,1 @@
+print('\033[4;36mComputador\033[m escolheu pedra')
