@@ -5,7 +5,7 @@ for c in range(6, 0, -1): #conta pra tras
 
 i = int(input('Inicio: '))
 f = int(input('Fim: '))
-p = int(input('Passo: '))
+p = int(input('Passos: '))
 
 for c in range(i, f+1, p):
-    print(c) 
+    print(c)
