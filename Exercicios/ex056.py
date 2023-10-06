@@ -6,29 +6,29 @@ nome = []
 idade = []
 sexo = []
 
-for c in range(1,5):
-    nome.append(str(input('Digite seu nome: ')).upper())
+for c in range(1, 5):
+    nome.append(str(input('Digite seu nome: ')).strip().upper())
     idade.append(int(input('Digite sua idade: ')))
     sexo.append(str(input('Escolha M - Masculino ou F - Feminino: ')).upper())
 
-# for i, op in enumerate(sexo):
-#     if op == 'M':
-#         maior_idade = max(idade)
-#         id_maior_idade = idade.index(maior_idade)
-#         print(f'O homem mais velho é {nome[id_maior_idade]} que tem {maior_idade} anos')
+if len(nome) == len(idade) == len(sexo):
+    cont = 0
+    maior_idade = 0
+    homem_mais_velho = ""
 
-masculino = 'M'
-limite = 20
-cont = 0 
-
-if masculino in sexo:
-    maior_idade = max(idade)
-    id_maior_idade = idade.index(maior_idade)
-elif masculino not in sexo:    
-    for idades in idade:
-        if idades > limite:
+    for i in range(len(nome)):
+        if sexo[i] == 'F' and idade[i] < 20:
             cont += 1
 
-print(f'-> A media de idade do grupo é {(sum(idade))/4}')
-print(f'-> O homem mais velho é {nome[id_maior_idade]} que tem {maior_idade} anos')
-print(f'-> A quantidade de mulheres menores que 20 é {cont}')
+        if sexo[i] == 'M' and idade[i] > maior_idade:
+            maior_idade = idade[i]
+            homem_mais_velho = nome[i]
+
+    print(f'-> A media de idade do grupo é {(sum(idade))/4}')
+    if homem_mais_velho:
+        print(f'-> O homem mais velho é {homem_mais_velho} que tem {maior_idade} anos')
+    else:
+        print('-> Não há homens cadastrados')
+    print(f'-> A quantidade de mulheres menores que 20 é {cont}')
+else:
+    print('Erro')
