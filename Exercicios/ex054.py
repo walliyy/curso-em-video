@@ -4,8 +4,8 @@ from datetime import date
 menor = 0
 maior = 0
 
-for c in range (0, 7):
-    ano = int(input('Informe o ano de nascimento: '))
+for c in range (1, 8):
+    ano = int(input(f'Em que ano a {c}ª pessoa nasceu? '))
     if (date.today().year - ano) < 21:
         menor += 1
     else:

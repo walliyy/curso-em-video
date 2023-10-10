@@ -4,7 +4,6 @@ tot = 0
 for c in range(1, n+1):
     if n % c == 0:
         tot += 1
-    # c += 11
 if tot == 2:
     print('É primo')
 else:
