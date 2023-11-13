@@ -2,9 +2,9 @@
 
 primeiro = int(input('Digite o número inicial: '))
 razao = int(input('Digite a razão: '))
-decimo = primeiro + (10 - 1) * razao # calcuilo enesimo termo da PA
+decimo = primeiro + (10 - 1) * razao # calculo enesimo termo da PA
 
-for c in range(primeiro, decimo + razao, razao):
-    print(c, end=' -> ')
+while decimo >= primeiro:
+    print(primeiro, end=' -> ')
+    primeiro += razao
 print('ACABOU')
-while primeiro <= decimo + razao:
