@@ -11,3 +11,20 @@ while termos != 0:
         print(primeiro, end=' -> ')
         primeiro += razao
 print('ACABOU')
+
+# Solução do professor
+primeiro = int(input('Digite o número inicial da PA: '))
+razao = int(input('Digite a razão da PA: '))
+termo = primeiro
+cont = 1
+total = 0
+mais = 10
+while mais != 0:
+    total = total + mais
+    while cont <= total:
+        print(termo, end=' -> ')
+        termo += razao
+        cont += 1
+    print('PAUSA')
+    mais = int(input('\nQuantos termos deseja exibir? Digite 0 para sair. '))
+print(f'Progressão finalizada com {total} termos mostrados.')

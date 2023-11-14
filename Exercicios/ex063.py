@@ -5,11 +5,12 @@ anterior = 0
 atual = 1
 cont = 0
 
-print(anterior, atual, end = " ")
+print(anterior,'-', atual, end = " - ")
 
 while cont < num - 2:
     proximo = anterior + atual
-    print(proximo, end = " ")
+    print(proximo, end = " - ")
     cont += 1
     anterior = atual
     atual = proximo
+print('FIM')
