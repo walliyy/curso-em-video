@@ -10,3 +10,14 @@ while True:
         cont += 1
     print('-'*30)
 print('PROGRAMA TABUADA ENCERRADO!')
+
+# Solução do professor
+while True:
+    num = int(input('Deseja ver a Tabuada de qual valor? '))
+    print('-'*30)
+    if num < 0:
+        break
+    for c in range (1, 11):
+        print(f'{num} X {c} = {num * c}')
+    print('-'*30)
+print('PROGRAMA TABUADA ENCERRADO!')
