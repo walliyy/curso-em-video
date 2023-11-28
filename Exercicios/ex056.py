@@ -48,10 +48,10 @@ for p in range(1, 5):
     if p == 1 and sexo in 'Mm':
         maiorIdadeHomem = idade
         nomeVelho = nome
-    if sexo in 'Mm' and idade > maiorIdadeHomem:
+    elif sexo in 'Mm' and idade > maiorIdadeHomem:
         maiorIdadeHomem = idade
         nomeVelho = nome
-    if sexo in 'Ff' and idade < 20:
+    elif sexo in 'Ff' and idade > 20:
         totMulher20 += 1
 
 mediaIdade = somaIdade / 4
