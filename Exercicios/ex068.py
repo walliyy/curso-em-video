@@ -2,9 +2,11 @@
 from random import randint
 
 soma = jogador = computador = cont = 0
+op = ' '
 
 while True:
-    op = str(input('Você escolhe Par ou Impar [P/I]: ')).upper().strip()[0]
+    while op not in 'PI':
+        op = str(input('Você escolhe Par ou Impar [P/I]: ')).upper().strip()[0]
     jogador = int(input('Digite um número: '))
     computador = randint(0,10)
     soma = computador + jogador
