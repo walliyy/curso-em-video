@@ -27,28 +27,3 @@ if notas10 > 0:
 if notas1 > 0:
     print(f'{notas1} notas de R$ 1,00,', end=' ')
 print(f'totalizando o saldo solicitado.')
-
-
-
-# valor = float(input('Informe o valor do saque: '))
-# cedulasUm = cedulasDez = cedulasVinte = cedulasCinquenta = 0
-# cedulasCinquenta = valor // 50
-# restoCinquenta = valor % 50
-# if restoCinquenta > 20:
-#     cedulasVinte = restoCinquenta // 20
-#     restoVinte = restoCinquenta % 20
-# elif restoCinquenta > 10:
-#     cedulasDez = restoCinquenta // 10
-#     restoDez = restoCinquenta % 10
-# elif restoCinquenta > 1:
-#     cedulasUm = restoCinquenta // 1
-#     restoUm = restoCinquenta % 1
-
-# print(f'cedulas 50 {cedulasCinquenta}')
-# print(f'resto 50 {restoCinquenta}')
-# print(f'cedulas 20 {cedulasVinte}')
-# print(f'resto 20 {restoVinte}')
-# print(f'cedulas 10 {cedulasDez}')
-# print(f'resto 10 {restoDez}')
-# print(f'cedulas 1 {cedulasUm}')
-# print(f'resto 1 {restoUm}')

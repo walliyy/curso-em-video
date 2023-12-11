@@ -12,12 +12,12 @@ while True:
     valor = float(input('Informe o valor do item: R$ '))
     if valor > 1000:
         maisDeMil += 1
-    if cont == 1:
+    if cont <= 1 or valor < vlrMaisBarato:
         maisBarato = produto
         vlrMaisBarato = valor
-    elif valor < vlrMaisBarato:
-        maisBarato = produto
-        vlrMaisBarato = valor
+    # elif valor < vlrMaisBarato:
+    #     maisBarato = produto
+    #     vlrMaisBarato = valor
     total += valor
     cont += 1
     op = str(input('Deseja continuar? [S/N] ')).upper().strip()[0]
@@ -25,7 +25,7 @@ while True:
         op = str(input('Opção inválida! Deseja continuar? [S/N] ')).upper().strip()[0]
     if op in 'nN':
         break
-print('---------- FIM DA COMPRA ----------')
+print('{:-^40}'.format(' FIM DA COMPRA '))
 print(f'O total da compra foi de R${total:.2f}')
 print(f'Temos {maisDeMil} produtos custando mais de R$ 1000,00')
 print(f'O produto mais barato é "{maisBarato}" e ele custa R${vlrMaisBarato:.2f}.')
